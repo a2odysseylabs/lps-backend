@@ -1,0 +1,79 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# PM2 files
+pids
+logs
+*.pid
+*.pid.lock
+dump.pm2
+
+# Coverage directories
+coverage/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Binaries
+.DS_Store
+
+# IDE or editor specific
+.vscode/
+.idea/
+
+# Temporary files
+*.swp
+*.swo
+*.swn
+*.bak
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Linux files
+*~
+
+# dotenv environment files (in case you use multiple environments)
+*.env.*
+.env.local
+.env.test
+.env.production
+
+# Build directories
+dist/
+build/
+
+# MongoDB data and local configurations
+*.lock
+dump/
