@@ -12,6 +12,7 @@ import {
 import {
   createNewEvent,
   getAllEvents,
+  getEventById,
 } from "../controllers/event.controller.js";
 import { uploadImageToS3 } from "../controllers/upload.controller.js";
 import { verifyJWT } from "../middlewares/auth.middleware.js";
@@ -35,6 +36,7 @@ router.get("/clients", verifyJWT, getAllClients);
 // Routes for events
 router.post("/events", verifyJWT, createNewEvent);
 router.get("/events", verifyJWT, getAllEvents);
+router.get("/events/:id", verifyJWT, getEventById);
 
 
 export default router;
