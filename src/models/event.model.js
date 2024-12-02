@@ -15,7 +15,7 @@ const eventSchema = new Schema(
       type: Date,
       required: true,
     },
-    collection: {
+    eventCollections: {
       type: [[Schema.Types.Mixed]], // Array of arrays, can hold any type
       default: [],
     },

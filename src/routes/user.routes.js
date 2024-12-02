@@ -14,7 +14,7 @@ import {
   getAllEvents,
   getEventById,
 } from "../controllers/event.controller.js";
-import { uploadImageToS3 } from "../controllers/upload.controller.js";
+import { uploadImageToS3, createCollectionInEvent } from "../controllers/upload.controller.js";
 import { verifyJWT } from "../middlewares/auth.middleware.js";
 import { upload } from "../middlewares/fileUpload.middleware.js";
 
@@ -38,5 +38,7 @@ router.post("/events", verifyJWT, createNewEvent);
 router.get("/events", verifyJWT, getAllEvents);
 router.get("/events/:id", verifyJWT, getEventById);
 
+// Routes for Collections
+router.post("/events/:eventId/collections", verifyJWT, createCollectionInEvent);
 
 export default router;
