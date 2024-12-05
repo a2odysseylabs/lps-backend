@@ -14,6 +14,7 @@ import {
   getAllEvents,
   getEventById,
 } from "../controllers/event.controller.js";
+import { createAttendee } from "../controllers/attendee.controller.js";
 import { uploadImageToS3, createCollectionInEvent } from "../controllers/upload.controller.js";
 import { verifyJWT } from "../middlewares/auth.middleware.js";
 import { upload } from "../middlewares/fileUpload.middleware.js";
@@ -22,6 +23,7 @@ const router = Router();
 
 router.route("/register").post(registerUser);
 router.route("/login").post(loginUser);
+router.post("/attendees", createAttendee);
 
 // secured routes
 
