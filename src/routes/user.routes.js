@@ -23,7 +23,7 @@ const router = Router();
 
 router.route("/register").post(registerUser);
 router.route("/login").post(loginUser);
-router.post("/attendees", createAttendee);
+router.post("/attendees", upload.single("image"), createAttendee);
 
 // secured routes
 

@@ -2,6 +2,10 @@ import mongoose, { Schema } from 'mongoose';
 
 const attendeeSchema = new Schema(
   {
+    name: {
+      type: String,
+      required: [true, 'Name is required'], // Name is now required
+    },
     email: {
       type: String,
       validate: {
